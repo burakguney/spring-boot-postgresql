@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.demo.entity.SubCategory;
 
-public interface SubCategoryRepository extends JpaRepository<SubCategory, Long>{
+public interface SubCategoryRepository extends JpaRepository<SubCategory, Long> {
 
 }

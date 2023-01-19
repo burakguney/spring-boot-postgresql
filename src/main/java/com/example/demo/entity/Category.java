@@ -17,10 +17,8 @@ public class Category {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String categoryName;
-	
 	@OneToMany(mappedBy = "category")
 	private List<Product> products;
-	
 	@OneToMany(mappedBy = "category")
 	private List<SubCategory> subCategories;
 }

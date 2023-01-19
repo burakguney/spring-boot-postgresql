@@ -15,24 +15,25 @@ import lombok.RequiredArgsConstructor;
 public class SubCategoryService {
 
 	private SubCategoryRepository subCategoryRepository;
-	
+
 	public SubCategory save(SubCategory subCategory) {
 		return subCategoryRepository.save(subCategory);
 	}
-	
+
 	public SubCategory findById(Long id) {
-		return subCategoryRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("SubCategory not found with id: " + id));
+		return subCategoryRepository.findById(id)
+				.orElseThrow(() -> new EntityNotFoundException("SubCategory not found with id: " + id));
 	}
-	
+
 	public List<SubCategory> findAll() {
 		return subCategoryRepository.findAll();
 	}
-	
+
 	public SubCategory update(SubCategory subCategory) {
 		findById(subCategory.getId());
 		return subCategoryRepository.save(subCategory);
 	}
-	
+
 	public void deleteById(Long id) {
 		subCategoryRepository.deleteById(id);
 	}

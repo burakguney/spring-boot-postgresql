@@ -10,7 +10,7 @@ import lombok.Data;
 @Entity
 @Data
 public class SubCategory {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
