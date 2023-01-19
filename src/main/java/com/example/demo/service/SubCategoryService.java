@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SubCategoryService {
 
-	private SubCategoryRepository subCategoryRepository;
+	private final SubCategoryRepository subCategoryRepository;
 
 	public SubCategory save(SubCategory subCategory) {
 		return subCategoryRepository.save(subCategory);

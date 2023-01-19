@@ -23,7 +23,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SubCategoryController {
 
-	private SubCategoryService subCategoryService;
+	private final SubCategoryService subCategoryService;
 
 	@GetMapping
 	public ResponseEntity<List<SubCategory>> findAll() {

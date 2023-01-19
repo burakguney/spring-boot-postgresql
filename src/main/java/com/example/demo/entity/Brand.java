@@ -11,16 +11,13 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Product {
+public class Brand {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String productName;
-	private String description;
-	private Double price;
-	private Long quantity;
+	private String brandName;
 	@ManyToOne
 	@JsonBackReference
-	private Category category;
+	private SubCategory subCategory;
 }
